@@ -40,7 +40,7 @@ x = setInterval(function() {
     mytime.innerHTML ='About '+y+' years or '+months+' months or '+weeks+' weeks; Exactly is '+ days + " days " + hours + " hours "+
         minutes + " minutes " + seconds + " seconds "
 }, 1000)
-birthday=new Date('May 22, 2018').getTime()
+birthday=new Date('May 22, 2018 20:15').getTime()
 setInterval(function(){
     let n=new Date().getTime(); let d=n-birthday; let mo=floor(d/(3600*24e3*28)); let w=floor(d/(3600*24e3*7))
     let da=floor(d/(3600*24e3)); let h=floor((d%(3600*24e3))/36e5)

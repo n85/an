@@ -1,4 +1,9 @@
 with(document){
+bo=['bo.jpg','bo2.jpg','bo3.jpg','bo4.jpg','bo5.jpg','bo6.jpg','bo7.jpg','bo8.jpg','bo9.jpg','bo10.jpg']
+for (i=0; i<bo.length; i++) {
+    scp.innerHTML+='<div class="ms f"><div class=nt>'+(i+1)+'</div> <img src='+bo[i]+' width=100%> <div class=text>Bơ Bủm Bỉm</div></div>'
+    csd.innerHTML+='<span class=d onclick=cs('+(i+1)+')></span> '
+}
 function o(evt, page) {
     tabcontent = getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) tabcontent[i].style.display = "none"
@@ -42,7 +47,7 @@ x = setInterval(function() {
 }, 1000)
 birthday=new Date('May 22, 2018 20:15').getTime()
 setInterval(function(){
-    let n=new Date().getTime(); let d=n-birthday; let mo=floor(d/(3600*24e3*28)); let w=floor(d/(3600*24e3*7))
+    let n=new Date().getTime(); let d=n-birthday; let mo=round(d/(3600*24e3*28)); let w=floor(d/(3600*24e3*7))
     let da=floor(d/(3600*24e3)); let h=floor((d%(3600*24e3))/36e5)
     let m=floor((d%36e5)/6e4); let s=floor((d%6e4)/1e3)
     yearsold.innerHTML='About '+mo+' months or '+w+' weeks; Exactly is '+da+' days '+h+' hours '+m+' minutes '+s+' seconds'

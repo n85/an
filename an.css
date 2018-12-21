@@ -1,4 +1,4 @@
-body {font-family: Arial; transition: background .5s} * {box-sizing: border-box}
+body {font-family: Tahoma; transition: background .5s} * {box-sizing: border-box}
 .tab {overflow: hidden; border: 1px solid #ccc; background: #f1f1f1}
 .tab button {background: inherit; float: left; border: none; outline: none; cursor: pointer; padding: 14px 16px; transition: 0.3s;
     font-size: 17px}
@@ -34,3 +34,4 @@ body {font-family: Arial; transition: background .5s} * {box-sizing: border-box}
 #flyb {margin-top: 175px; position: absolute; left: 1220px; -webkit-animation: z 15s infinite; animation: z 15s infinite}
 @-webkit-keyframes z {50% {left: 20px}} @keyframes z {50% {left: 20px}}
 #main, .fb-comments {float: left} .fb-comments {margin-left: 350px}
+#decor {font-size: 50px; padding-left: 30vw; padding-top: 5vw}

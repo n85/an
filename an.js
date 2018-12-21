@@ -53,3 +53,9 @@ setInterval(function(){
     yearsold.innerHTML='About '+mo+' months or '+w+' weeks; Exactly is '+da+' days '+h+' hours '+m+' minutes '+s+' seconds'
 }, 1000)}
 }
+name='Vũ Bảo An 武保安'; count=0
+window.onload=function nhay() {
+    let n=name.substring(count, name.length); let o=name.substring(0, count)
+    namea.firstChild.nodeValue=n+' '+o; nameb.firstChild.nodeValue=o; namec.firstChild.nodeValue=n; count++
+    if (count>name.length) count=0; setTimeout(nhay,320)
+}

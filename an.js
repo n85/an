@@ -52,10 +52,22 @@ setInterval(function(){
     let m=floor((d%36e5)/6e4); let s=floor((d%6e4)/1e3)
     yearsold.innerHTML='About '+mo+' months or '+w+' weeks; Exactly is '+da+' days '+h+' hours '+m+' minutes '+s+' seconds'
 }, 1000)}
+lap=0
 }
 name='Vũ Bảo An 武保安'; count=0
 window.onload=function nhay() {
     let n=name.substring(count, name.length); let o=name.substring(0, count)
     namea.firstChild.nodeValue=n+' '+o; nameb.firstChild.nodeValue=o; namec.firstChild.nodeValue=n; count++
-    if (count>name.length) count=0; setTimeout(nhay,320)
+    if (count>name.length) count=0
+    decor=document.getElementById('decor')
+    dec=decor.getElementsByTagName('img')
+    dec[lap].style.border='solid'
+    lap++
+    console.log(lap)
+    if (lap==1) lap++
+    dec[lap-2].style.border=''
+    if (lap>=3) lap=0
+    dec[lap].style.border=''
+	//dec[lap++].style.border='solid'
+	setTimeout(nhay,520)
 }

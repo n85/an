@@ -61,13 +61,16 @@ window.onload=function nhay() {
     if (count>name.length) count=0
     decor=document.getElementById('decor')
     dec=decor.getElementsByTagName('img')
-    dec[lap].style.border='solid'
-    lap++
-    console.log(lap)
-    if (lap==1) lap++
-    dec[lap-2].style.border=''
-    if (lap>=3) lap=0
-    dec[lap].style.border=''
-	//dec[lap++].style.border='solid'
+	if ((lap==0) || (lap==1)) {
+		dec[lap].style.border=''
+		dec[lap+1].style.border='solid'
+	}
+	else if (lap==2) {
+		dec[lap].style.border=''
+		dec[lap-2].style.border='solid'
+	}
+	lap++
+	console.log(lap)
+	if (lap>2) lap=0
 	setTimeout(nhay,520)
 }

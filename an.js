@@ -70,7 +70,6 @@ window.onload=function nhay() {
 		dec[lap-2].style.border='solid'
 	}
 	lap++
-	console.log(lap)
 	if (lap>2) lap=0
 	setTimeout(nhay,520)
 }

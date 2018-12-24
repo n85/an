@@ -1,7 +1,7 @@
 with(document){
-bo=['bo.jpg','bo2.jpg','bo3.jpg','bo4.jpg','bo5.jpg','bo6.jpg','bo7.jpg','bo8.jpg','bo9.jpg','bo10.jpg']
+bo=['bo.jpg','bo2.jpg','bo3.jpg','bo4.jpg','bo5.jpg','bo6.jpg','bo7.jpg','bo8.jpg','bo9.jpg','bo10.jpg','bo11.jpg','bo12.jpg','bo13.jpg','bo14.jpg','bo15.jpg','bo16.jpg','bo17.jpg','bo18.jpg','bo19.jpg','bo20.jpg','bo21.jpg','bo22.jpg','bo23.jpg','bo24.jpg','bo25.jpg','bo26.jpg']
 for (i=0; i<bo.length; i++) {
-    scp.innerHTML+='<div class="ms f"><div class=nt>'+(i+1)+'</div> <img src='+bo[i]+' width=100%> <div class=text>Bơ Bủm Bỉm</div></div>'
+    scp.innerHTML+='<div class="ms f"><div class=nt>'+(i+1)+'</div> <img src='+bo[i]+' width=100%> <div class=text>Bơ Bủm Bỉm '+(i+1)+'</div></div>'
     csd.innerHTML+='<span class=d onclick=cs('+(i+1)+')></span> '
 }
 function o(evt, page) {
@@ -59,17 +59,16 @@ window.onload=function nhay() {
     let n=name.substring(count, name.length); let o=name.substring(0, count)
     namea.firstChild.nodeValue=n+' '+o; nameb.firstChild.nodeValue=o; namec.firstChild.nodeValue=n; count++
     if (count>name.length) count=0
-    decor=document.getElementById('decor')
     dec=decor.getElementsByTagName('img')
-	if ((lap==0) || (lap==1)) {
+	if (lap==0 || lap==1) {
 		dec[lap].style.border=''
 		dec[lap+1].style.border='solid'
 	}
-	else if (lap==2) {
+	else {
 		dec[lap].style.border=''
 		dec[lap-2].style.border='solid'
 	}
 	lap++
 	if (lap>2) lap=0
-	setTimeout(nhay,520)
+	setTimeout(nhay,500)
 }

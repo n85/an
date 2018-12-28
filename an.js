@@ -52,15 +52,25 @@ setInterval(function(){
     let m=floor((d%36e5)/6e4); let s=floor((d%6e4)/1e3)
     yearsold.innerHTML='About '+mo+' months or '+w+' weeks; Exactly is '+da+' days '+h+' hours '+m+' minutes '+s+' seconds'
 }, 1000)}
-lap=0
+lap=0; chu=0
+dec=vba.getElementsByTagName('img')
+bcn=cn.getElementsByTagName('img')
 }
 name='Vũ Bảo An 武保安'; count=0
 window.onload=function nhay() {
     let n=name.substring(count, name.length); let o=name.substring(0, count)
     namea.firstChild.nodeValue=n+' '+o; nameb.firstChild.nodeValue=o; namec.firstChild.nodeValue=n; count++
     if (count>name.length) count=0
-    dec=decor.getElementsByTagName('img')
-	if (lap==0 || lap==1) {
+    if (chu<4) {
+        bcn[chu].style.display='none'
+        bcn[chu+1].style.display='block'
+    }
+    else {
+        bcn[chu].style.display='none'
+        bcn[chu-4].style.display='block'
+    }
+    chu++
+	if (lap<2) {
 		dec[lap].style.border=''
 		dec[lap+1].style.border='solid'
 	}
@@ -70,5 +80,6 @@ window.onload=function nhay() {
 	}
 	lap++
 	if (lap>2) lap=0
-	setTimeout(nhay,500)
+    if (chu>4) chu=0
+	setTimeout(nhay,1000)
 }

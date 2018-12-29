@@ -52,9 +52,10 @@ setInterval(function(){
     let m=floor((d%36e5)/6e4); let s=floor((d%6e4)/1e3)
     yearsold.innerHTML='About '+mo+' months or '+w+' weeks; Exactly is '+da+' days '+h+' hours '+m+' minutes '+s+' seconds'
 }, 1000)}
-lap=0; chu=0
+lap=0; chu=0; anh=0
 dec=vba.getElementsByTagName('img')
 bcn=cn.getElementsByTagName('img')
+anbot=anbo.getElementsByTagName('img')
 }
 name='Vũ Bảo An 武保安'; count=0
 window.onload=function nhay() {
@@ -62,24 +63,24 @@ window.onload=function nhay() {
     namea.firstChild.nodeValue=n+' '+o; nameb.firstChild.nodeValue=o; namec.firstChild.nodeValue=n; count++
     if (count>name.length) count=0
     if (chu<4) {
-        bcn[chu].style.display='none'
-        bcn[chu+1].style.display='block'
+        bcn[chu].style.display='none'; bcn[chu+1].style.display='block'
     }
     else {
-        bcn[chu].style.display='none'
-        bcn[chu-4].style.display='block'
+        bcn[chu].style.display='none'; bcn[chu-4].style.display='block'
     }
-    chu++
+    if (anh<2) {
+    	anbot[anh].style.display='none'; anbot[anh+1].style.display='block'
+    }
+    else {
+    	anbot[anh].style.display='none'; anbot[anh-2].style.display='block'
+    }
 	if (lap<2) {
-		dec[lap].style.border=''
-		dec[lap+1].style.border='solid'
+		dec[lap].style.border=''; dec[lap+1].style.border='solid'
 	}
 	else {
-		dec[lap].style.border=''
-		dec[lap-2].style.border='solid'
+		dec[lap].style.border=''; dec[lap-2].style.border='solid'
 	}
-	lap++
-	if (lap>2) lap=0
-    if (chu>4) chu=0
+	lap++; chu++; anh++
+	if (lap>2) lap=0; if (chu>4) chu=0; if (anh>anbot.length-1) anh=0
 	setTimeout(nhay,1000)
 }
